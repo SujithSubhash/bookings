@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/SujithSubhash/bookings/pkg/config"
-	"github.com/SujithSubhash/bookings/pkg/handlers"
-	"github.com/SujithSubhash/bookings/pkg/render"
+	"github.com/SujithSubhash/bookings/internal/config"
+	"github.com/SujithSubhash/bookings/internal/handlers"
+	"github.com/SujithSubhash/bookings/internal/render"
 	"github.com/alexedwards/scs/v2"
 )
 
@@ -21,18 +21,22 @@ func main() {
 
 	//change this to true when in production
 	app.InProduction = false
+	//setup the session
 	session = scs.New()
 	session.Lifetime = 24 * time.Hour
 	session.Cookie.Persist = true
 	session.Cookie.SameSite = http.SameSiteLaxMode
 	session.Cookie.Secure = app.InProduction
+
 	app.Session = session
+
 	tc, err := render.CreateTemplateCache()
 	if err != nil {
 		log.Fatal("Cannot create template cache")
 	}
 	app.TemplateCache = tc
 	app.UseCache = false
+
 	repo := handlers.NewRepo(&app)
 
 	handlers.NewHandlers(repo)
@@ -50,5 +54,7 @@ func main() {
 		Handler: routes(&app),
 	}
 	err = srv.ListenAndServe()
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
