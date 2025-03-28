@@ -1,0 +1,22 @@
+mode: set
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:36.67,41.2 3 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:44.68,55.2 5 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:58.74,70.2 4 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:73.78,75.16 2 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:75.16,78.3 2 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:79.2,92.19 6 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:92.19,101.3 4 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:102.2,104.66 2 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:109.71,111.2 1 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:114.69,116.2 1 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:119.75,121.2 1 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:124.79,128.2 3 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:136.79,142.16 3 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:142.16,144.3 1 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:146.2,147.14 2 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:151.70,153.2 1 0
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:154.81,157.9 2 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:157.9,162.3 4 1
+github.com/SujithSubhash/bookings/internal/handlers/handlers.go:163.2,169.4 4 0
