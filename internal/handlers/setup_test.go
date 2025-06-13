@@ -54,7 +54,7 @@ func getRoutes() http.Handler {
 	repo := NewRepo(&app)
 
 	NewHandlers(repo)
-	render.NewTemplates(&app)
+	render.NewRenderer(&app)
 	mux := chi.NewRouter()
 
 	mux.Use(middleware.Recoverer)
@@ -82,7 +82,9 @@ func getRoutes() http.Handler {
 	mux.Handle("/static/*", http.StripPrefix("/static", fileserver))
 
 	return mux
-} // NoSurf adds CSRF protection to all POST requests
+}
+
+// NoSurf adds CSRF protection to all POST requests
 func NoSurf(next http.Handler) http.Handler {
 	csrfHandler := nosurf.New(next)
 
